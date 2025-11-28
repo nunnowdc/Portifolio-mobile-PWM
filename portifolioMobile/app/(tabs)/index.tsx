@@ -1,27 +1,21 @@
-// File: portifolioMobile/app/(tabs)/index.tsx
-import { Image, StyleSheet, Platform } from 'react-native';
+import { Image } from 'expo-image';
+import { Platform, StyleSheet } from 'react-native';
 
 import { HelloWave } from '@/components/hello-wave';
 import ParallaxScrollView from '@/components/parallax-scroll-view';
 import { ThemedText } from '@/components/themed-text';
 import { ThemedView } from '@/components/themed-view';
-// Importa o novo componente
-import { CodeRainBackground } from '@/components/code-rain-background'; 
+import { Link } from 'expo-router';
 
 export default function HomeScreen() {
   return (
     <ParallaxScrollView
-      // Novo Fundo para o tema: alto contraste
       headerBackgroundColor={{ light: '#DCDCDC', dark: '#151718' }} 
       headerImage={
-        <>
-          {/* Adiciona o efeito de Partículas/Code Rain no Header */}
-          <CodeRainBackground />
-          <Image
-            source={require('@/assets/images/partial-react-logo.png')}
-            style={styles.reactLogo}
-          />
-        </>
+        <Image
+          source={require('@/assets/images/partial-react-logo.png')}
+          style={styles.reactLogo}
+        />
       }>
       <ThemedView style={styles.titleContainer}>
         <ThemedText type="title">Bem-vindo(a)!</ThemedText>
@@ -74,10 +68,6 @@ const styles = StyleSheet.create({
     bottom: 0,
     left: 0,
     position: 'absolute',
-  },
-  getStartedContainer: {
-    alignItems: 'center',
-    marginHorizontal: 50,
   },
   getStartedText: {
     fontSize: 17,

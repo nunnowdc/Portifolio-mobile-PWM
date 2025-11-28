@@ -10,7 +10,7 @@ const tintColorLight = '#008080';
 export const Colors = {
   light: {
     text: '#11181C',
-    background: '#F0F0F0',
+    background: '#F0F0F0', 
     tint: tintColorLight,
     icon: '#687076',
     tabIconDefault: '#687076',
@@ -24,7 +24,6 @@ export const Colors = {
     tabIconDefault: '#9BA1A6',
     tabIconSelected: tintColorDark,
   },
-  codeHighlight: '#00FF00', 
 };
 
 export const Fonts = Platform.select({

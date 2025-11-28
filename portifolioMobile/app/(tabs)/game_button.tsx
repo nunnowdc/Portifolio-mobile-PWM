@@ -6,22 +6,18 @@ import { ThemedText } from '@/components/themed-text';
 import { ThemedView } from '@/components/themed-view';
 import { IconSymbol } from '@/components/ui/icon-symbol';
 import { Fonts } from '@/constants/theme';
-import { CodeRainBackground } from '@/components/code-rain-background';
 
 export default function GameButtonScreen() {
   return (
     <ParallaxScrollView
       headerBackgroundColor={{ light: '#DCDCDC', dark: '#151718' }} 
       headerImage={
-        <>
-          <CodeRainBackground />
-          <IconSymbol
-            size={250}
-            color="#808080"
-            name="gamecontroller.fill"
-            style={styles.headerImage}
-          />
-        </>
+        <IconSymbol
+          size={250}
+          color="#808080"
+          name="gamecontroller.fill"
+          style={styles.headerImage}
+        />
       }>
       <ThemedView style={styles.titleContainer}>
         <ThemedText
@@ -37,12 +33,11 @@ export default function GameButtonScreen() {
       </ThemedText>
 
       <ThemedView style={styles.buttonContainer}>
-        {/* O Link navega para a tela "hangman-game" (placeholder) */}
         <Link href="/hangman-game" asChild>
           <Button title="Começar Jogo" />
         </Link>
         <ThemedText type="defaultSemiBold" style={{ marginTop: 16 }}>
-          A tela de jogo será implementada no arquivo `app/hangman-game.tsx` (próxima etapa).
+          A tela de jogo será implementada no arquivo \`app/hangman-game.tsx\` (próxima etapa).
         </ThemedText>
       </ThemedView>
     </ParallaxScrollView>
@@ -56,7 +51,6 @@ const styles = StyleSheet.create({
     left: 0,
     position: 'absolute',
     alignSelf: 'center',
-    opacity: 0.8,
   },
   titleContainer: {
     flexDirection: 'row',

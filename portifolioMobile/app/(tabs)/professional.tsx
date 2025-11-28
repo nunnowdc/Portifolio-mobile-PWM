@@ -1,4 +1,3 @@
-// File: portifolioMobile/app/(tabs)/professional.tsx
 import { StyleSheet } from 'react-native';
 
 import { Collapsible } from '@/components/ui/collapsible';

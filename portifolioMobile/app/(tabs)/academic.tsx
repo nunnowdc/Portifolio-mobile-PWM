@@ -12,12 +12,12 @@ export default function AcademicScreen() {
     {
       title: 'Bacharel em Ciência da Computação',
       institution: 'Universidade Católica de Pernambuco - Pernambuco/PE',
-      period: '02/2023 - 06/2027 (5º Período)'
+      period: '02/2023 - 06/2027 (5º Período)',
     },
     {
       title: 'Curso de Idiomas - Inglês',
       institution: 'Senac PE - Pernambuco/PE',
-      period: '02/2023-06/2026 (Upper-Intermediate B1)'
+      period: '02/2023-06/2026 (Upper-Intermediate B1)',
     },
   ];
 
@@ -25,6 +25,7 @@ export default function AcademicScreen() {
     <ParallaxScrollView
       headerBackgroundColor={{ light: '#DCDCDC', dark: '#151718' }}
       headerImage={
+        // REMOVIDO: <CodeRainBackground />
         <IconSymbol
           size={250}
           color="#808080"

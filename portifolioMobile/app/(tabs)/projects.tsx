@@ -13,14 +13,14 @@ export default function ProjectsScreen() {
     {
       title: 'Sistema Integrado de Gerenciamento',
       period: '07/2024-11/2024',
-      description: 'Projeto Java com conceito CRUD para gerenciamento de 3 áreas distintas: restaurante, eventos e clínica médica. [cite_start]O sistema utiliza princípios de POO como encapsulamento, abstração e reutilização de código.',
+      description: 'Projeto Java com conceito CRUD para gerenciamento de 3 áreas distintas: restaurante, eventos e clínica médica. O sistema utiliza princípios de POO como encapsulamento, abstração e reutilização de código.',
       skills: 'Java, Github, POO & Trabalho em Equipe.',
       linkText: 'Ver no Github'
     },
     {
       title: 'Sistema de Receituário - UPA Emergência Pediátrica',
       period: '03/2025-06/2025',
-      description: 'Projeto Django com conceito CRUD para gerenciamento de uma aplicação web destinada para uso médico e com fins pediátricos. [cite_start]A aplicação foi desenvolvida usando o princípio de arquitetura em 3 camadas, ou seja, desenvolvemos o FrontEnd, o BackEnd e garantimos que as interação na aplicação iriam interagir de alguma forma com nosso banco de dados, seja ler, alterar, adicionar ou excluir dados.',
+      description: 'Projeto Django com conceito CRUD para gerenciamento de uma aplicação web destinada para uso médico e com fins pediátricos. A aplicação foi desenvolvida usando o princípio de arquitetura em 3 camadas, ou seja, desenvolvemos o FrontEnd, o BackEnd e garantimos que as interação na aplicação iriam interagir de alguma forma com nosso banco de dados, seja ler, alterar, adicionar ou excluir dados.',
       skills: 'Trabalho em Equipe, Python, Django, Fullstack & SQLite3.',
       linkText: 'Ver no Github'
     },
