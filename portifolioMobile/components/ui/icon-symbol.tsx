@@ -18,6 +18,11 @@ const MAPPING = {
   'paperplane.fill': 'send',
   'chevron.left.forwardslash.chevron.right': 'code',
   'chevron.right': 'chevron-right',
+  'info.circle.fill': 'info', 
+  'book.fill': 'book', 
+  'person.3.fill': 'group', 
+  'hammer.fill': 'build', 
+  'gamecontroller.fill': 'gamepad', 
 } as IconMapping;
 
 /**
