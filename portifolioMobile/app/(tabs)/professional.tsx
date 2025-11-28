@@ -6,8 +6,13 @@ import { ThemedText } from '@/components/themed-text';
 import { ThemedView } from '@/components/themed-view';
 import { IconSymbol } from '@/components/ui/icon-symbol';
 import { Fonts } from '@/constants/theme';
+import { Colors } from '@/constants/theme'; 
+import { useColorScheme } from '@/hooks/use-color-scheme'; 
 
 export default function ProfessionalScreen() {
+  const colorScheme = useColorScheme() ?? 'dark';
+  const neonCyan = Colors.dark.tint;
+
   const experience = [
     {
       title: 'Voluntariado - Programa Institucional de Bolsas de Iniciação Científica (PIBIC)',
@@ -22,7 +27,7 @@ export default function ProfessionalScreen() {
       headerImage={
         <IconSymbol
           size={250}
-          color="#808080"
+          color={colorScheme === 'dark' ? neonCyan : '#808080'} // Neon Icon
           name="person.3.fill"
           style={styles.headerImage}
         />

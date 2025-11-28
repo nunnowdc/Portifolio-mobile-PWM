@@ -6,9 +6,14 @@ import { ThemedText } from '@/components/themed-text';
 import { ThemedView } from '@/components/themed-view';
 import { IconSymbol } from '@/components/ui/icon-symbol';
 import { Fonts } from '@/constants/theme';
+import { Colors } from '@/constants/theme'; 
+import { useColorScheme } from '@/hooks/use-color-scheme'; 
 import { ExternalLink } from '@/components/external-link';
 
 export default function ProjectsScreen() {
+  const colorScheme = useColorScheme() ?? 'dark';
+  const neonCyan = Colors.dark.tint;
+
   const projects = [
     {
       title: 'Sistema Integrado de Gerenciamento',
@@ -34,7 +39,7 @@ export default function ProjectsScreen() {
       headerImage={
         <IconSymbol
           size={250}
-          color="#808080"
+          color={colorScheme === 'dark' ? neonCyan : '#808080'} // Neon Icon
           name="hammer.fill"
           style={styles.headerImage}
         />

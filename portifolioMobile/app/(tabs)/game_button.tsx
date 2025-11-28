@@ -6,15 +6,20 @@ import { ThemedText } from '@/components/themed-text';
 import { ThemedView } from '@/components/themed-view';
 import { IconSymbol } from '@/components/ui/icon-symbol';
 import { Fonts } from '@/constants/theme';
+import { Colors } from '@/constants/theme'; 
+import { useColorScheme } from '@/hooks/use-color-scheme'; 
 
 export default function GameButtonScreen() {
+  const colorScheme = useColorScheme() ?? 'dark';
+  const neonCyan = Colors.dark.tint;
+
   return (
     <ParallaxScrollView
       headerBackgroundColor={{ light: '#DCDCDC', dark: '#151718' }} 
       headerImage={
         <IconSymbol
           size={250}
-          color="#808080"
+          color={colorScheme === 'dark' ? neonCyan : '#808080'} // Neon Icon
           name="gamecontroller.fill"
           style={styles.headerImage}
         />

@@ -1,20 +1,24 @@
 import { Image } from 'expo-image';
-import { Platform, StyleSheet } from 'react-native';
+import { StyleSheet, Platform } from 'react-native';
 
 import { HelloWave } from '@/components/hello-wave';
 import ParallaxScrollView from '@/components/parallax-scroll-view';
 import { ThemedText } from '@/components/themed-text';
 import { ThemedView } from '@/components/themed-view';
-import { Link } from 'expo-router';
+import { Colors } from '@/constants/theme'; 
+import { useColorScheme } from '@/hooks/use-color-scheme'; 
 
 export default function HomeScreen() {
+  const colorScheme = useColorScheme() ?? 'dark';
+  const neonCyan = Colors.dark.tint; 
+
   return (
     <ParallaxScrollView
       headerBackgroundColor={{ light: '#DCDCDC', dark: '#151718' }} 
       headerImage={
         <Image
           source={require('@/assets/images/partial-react-logo.png')}
-          style={styles.reactLogo}
+          style={[styles.reactLogo, { tintColor: colorScheme === 'dark' ? neonCyan : undefined }]}
         />
       }>
       <ThemedView style={styles.titleContainer}>
@@ -26,8 +30,9 @@ export default function HomeScreen() {
         <ThemedText type="default">Cientista da Computação (5º Período)</ThemedText>
       </ThemedView>
 
-      <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">Sobre Este Portfólio</ThemedText>
+      {/* Estilização para simular a borda Ciano Neon */}
+      <ThemedView style={[styles.stepContainer, { borderColor: neonCyan, borderLeftWidth: 2, paddingLeft: 10 }]}>
+        <ThemedText type="subtitle" style={{ color: neonCyan }}>Sobre Este Portfólio</ThemedText>
         <ThemedText>
           Este aplicativo é um portfólio desenvolvido em{' '}
           <ThemedText type="defaultSemiBold">React Native</ThemedText> com{' '}
