@@ -26,12 +26,11 @@ export default function ProjectsScreen() {
     },
   ];
 
-  // OBS: O currículo não forneceu os links diretos para os projetos, apenas o perfil do Github.
-  const githubLink = 'https://github.com/nunnowo';
+  const githubLink = 'https://github.com/nunnowdc';
 
   return (
     <ParallaxScrollView
-      headerBackgroundColor={{ light: '#A1CEDC', dark: '#1D3D47' }}
+      headerBackgroundColor={{ light: '#DCDCDC', dark: '#151718' }}
       headerImage={
         <IconSymbol
           size={250}

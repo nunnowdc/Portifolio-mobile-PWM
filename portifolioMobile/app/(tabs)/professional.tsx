@@ -19,7 +19,7 @@ export default function ProfessionalScreen() {
 
   return (
     <ParallaxScrollView
-      headerBackgroundColor={{ light: '#D0D0D0', dark: '#353636' }}
+      headerBackgroundColor={{ light: '#DCDCDC', dark: '#151718' }}
       headerImage={
         <IconSymbol
           size={250}

@@ -23,7 +23,7 @@ export default function AcademicScreen() {
 
   return (
     <ParallaxScrollView
-      headerBackgroundColor={{ light: '#A1CEDC', dark: '#1D3D47' }}
+      headerBackgroundColor={{ light: '#DCDCDC', dark: '#151718' }}
       headerImage={
         <IconSymbol
           size={250}
