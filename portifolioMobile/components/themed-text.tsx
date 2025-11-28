@@ -1,11 +1,12 @@
 import { StyleSheet, Text, type TextProps } from 'react-native';
 
 import { useThemeColor } from '@/hooks/use-theme-color';
+import { Fonts } from '@/constants/theme'; 
 
 export type ThemedTextProps = TextProps & {
   lightColor?: string;
   darkColor?: string;
-  type?: 'default' | 'title' | 'defaultSemiBold' | 'subtitle' | 'link';
+  type?: 'default' | 'title' | 'defaultSemiBold' | 'subtitle' | 'link' | 'mono'; 
 };
 
 export function ThemedText({
@@ -26,6 +27,8 @@ export function ThemedText({
         type === 'defaultSemiBold' ? styles.defaultSemiBold : undefined,
         type === 'subtitle' ? styles.subtitle : undefined,
         type === 'link' ? styles.link : undefined,
+        // NOVO ESTILO APLICADO:
+        type === 'mono' ? styles.mono : undefined, 
         style,
       ]}
       {...rest}
@@ -57,4 +60,10 @@ const styles = StyleSheet.create({
     fontSize: 16,
     color: '#0a7ea4',
   },
+
+  mono: {
+    fontFamily: Fonts.mono,
+    lineHeight: 22,
+    fontSize: 18,
+  }
 });
